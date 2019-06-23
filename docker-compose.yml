@@ -5,7 +5,7 @@ services:
     build: .
     image: strapi/strapi
     environment:
-      - APP_NAME=strapi-app
+      - APP_NAME=ApiNews
       - DATABASE_CLIENT=mongo
       - DATABASE_HOST=db
       - DATABASE_PORT=27017
@@ -18,7 +18,7 @@ services:
     ports:
       - 1337:1337
     volumes:
-      - ./strapi-app:/usr/src/api/strapi-app
+      - ./ApiNews:/usr/src/api/ApiNews
       #- /usr/src/api/strapi-app/node_modules
     depends_on:
       - db

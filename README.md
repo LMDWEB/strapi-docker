@@ -38,12 +38,12 @@ docker run -e MONGO_INITDB_DATABASE=strapi \
 Start strapi
 
 ```bash
-docker run -e APP_NAME=strapi-app \
+docker run -e APP_NAME=ApiNews \
            -e DATABASE_CLIENT=mongo \
            -e DATABASE_HOST=strapi-mongo \
            -e DATABASE_PORT=27017 \
            -e DATABASE_NAME=strapi \
-           -v `pwd`/strapi-app:/usr/src/api/strapi-app \
+           -v `pwd`/ApiNews:/usr/src/api/ApiNews \
            --link strapi-mongo:mongo \
            -p 1337:1337 \
            --name strapi -d strapi/strapi
@@ -59,7 +59,7 @@ FROM strapi/strapi
 
 ## Environment variables
 
-- `APP_NAME` to override the `strapi-app` generated folder name (you should also update the volumes paths).
+- `APP_NAME` to override the `ApiNews` generated folder name (you should also update the volumes paths).
 - `DATABASE_CLIENT` a database providers supported by Strapi: MongoDB, Postgres, MySQL, Sqlite3 and Redis.
 - `DATABASE_HOST` database service name.
 - `DATABASE_PORT` depends on your database client.
