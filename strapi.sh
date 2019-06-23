@@ -11,8 +11,6 @@ trap _stopStrapi SIGTERM SIGINT
 
 cd /usr/src/api
 
-git clone https://github.com/LMDWEB/ApiNews.git
-
 APP_NAME=${APP_NAME:-ApiNews}
 DATABASE_CLIENT=${DATABASE_CLIENT:-mongo}
 DATABASE_HOST=${DATABASE_HOST:-localhost}
